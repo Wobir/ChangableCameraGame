@@ -1,2 +1,3 @@
 # ChangableCameraGame
-3д Игра в 2д плоскостях 
+3D Игра в 2D плоскостях 
+На PyGame
