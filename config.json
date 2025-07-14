@@ -1,0 +1,35 @@
+{
+  "window": {
+    "width": 800,
+    "height": 600,
+    "title": "ChangableCamera"
+  },
+  "gravity": 4,
+  "fps": 60,
+  "colors": {
+    "circle": [40, 40, 255],
+    "rect": [255, 40, 40],
+    "background": [255, 255, 255],
+    "camera_bg": [50, 50, 50],
+    "camera_border": [100, 100, 100],
+    "text": [255, 255, 255]
+  },
+  "camera_layouts": [
+    [0, 0, 400, 300],
+    [400, 0, 400, 300],
+    [0, 300, 400, 300],
+    [400, 300, 400, 300]
+  ],
+  "player": {
+    "start_pos": [0, 0, 0],
+    "form": "circle",
+    "radius": 20,
+    "speed": 10,
+    "jump_speed": -50,
+    "jump_anim_length": 10
+  },
+  "world_border": {
+    "pos": [-500, 0, -500],
+    "pos_end": [1500, 0, 1500]
+  }
+}
