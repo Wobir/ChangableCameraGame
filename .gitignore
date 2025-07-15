@@ -205,3 +205,54 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Build artifacts
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userprefs
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# MonoGame pipeline tool
+*.mgcb.*
+*.xnb
+
+# Logs
+*.log
+
+# Rider/JetBrains (если используешь параллельно)
+.idea/
+*.iml
+
+# Backup files
+*~
+*.bak
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# Dotnet CLI artifacts
+project.lock.json
+project.assets.json
+*.deps.json
+
+# Temp files
+tmp/
+temp/
+
+# Mac/Linux hidden files
+._*
+
