@@ -4,12 +4,11 @@
 Настройки читаются из config.json. Компоненты структурированы по модулям.
 """
 import pygame as pg
-import json
 from camera import Camera
 from player import Player
-from objects import Object, WorldBorder
+from objects import Object, WorldBorder, Cube
 from settings import (
-    WINDOW_SIZE, HALF_WINDOW, FPS, FULLCAM,
+    WINDOW_SIZE, FPS, FULLCAM,
     COLORS, CAMERA_LAYOUTS, load_config
 )
 
@@ -26,9 +25,9 @@ config = load_config()
 
 # Инициализация мира и объектов
 world_border = WorldBorder(config["world_border"]["pos"], config["world_border"]["pos_end"])
-platform = Object((300, 580, 300), "rect")
+platform = Cube((300, 480, 300), "rect", (200,100,150))
 circle = Player(tuple(config["player"]["start_pos"]), config["player"]["form"])
-objects = [platform, circle]
+objects = [ platform, circle]
 
 # Инициализация камер
 cameras = [

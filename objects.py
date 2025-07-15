@@ -26,10 +26,9 @@ class Object:
             form (str): Форма ('circle' или 'rect').
         """
         self.pos = pg.Vector3(pos)
-        self.visible_pos = pg.Vector3(pos)
         self.form = form
 
-    def draw(self, relative_pos: tuple, relative_scale: tuple, surface: pg.Surface) -> None:
+    def draw(self, relative_pos: tuple, relative_scale: tuple, surface: pg.Surface , plane: str) -> None:
         """
         Отрисовать объект.
 
@@ -49,3 +48,26 @@ class Object:
                 surface, COLORS["rect"],
                 (*relative_pos, 100 * relative_scale[0], 30 * relative_scale[1])
             )
+
+
+class Cube(Object):
+    def __init__(self, pos: tuple, form: str, size_dimensions: tuple):
+        super().__init__(pos, form)
+        self.size = pg.Vector3(size_dimensions)
+
+    def draw(self, relative_pos: tuple, relative_scale: tuple, surface: pg.Surface, plane: str) -> None:
+        if plane == "XZ":
+            visual_width = self.size.x
+            visual_height = self.size.z
+        elif plane == "ZY":
+            visual_width = self.size.z
+            visual_height = self.size.y
+        elif plane == "XY":
+            visual_width = self.size.x
+            visual_height = self.size.y
+        else:
+            visual_width, visual_height = 0, 0
+        pg.draw.rect(
+            surface, COLORS["rect"],
+            (*relative_pos, visual_width * relative_scale[0], visual_height * relative_scale[1])
+        )

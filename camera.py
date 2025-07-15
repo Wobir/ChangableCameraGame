@@ -86,7 +86,7 @@ class Camera:
 
             if 0 <= ox <= WINDOW_SIZE[0] and 0 <= oy <= WINDOW_SIZE[1]:
                 draw_pos = (ox * self.scaleX + self.x, oy * self.scaleY + self.y)
-                obj.draw(draw_pos, (self.scaleX, self.scaleY), window)
+                obj.draw(draw_pos, (self.scaleX, self.scaleY), window, self.plane)
 
         # Отрисовка координат
         if self.plane == "XZ":

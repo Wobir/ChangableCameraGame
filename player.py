@@ -59,7 +59,7 @@ class Player(Object):
 
 
 
-    def draw(self, relative_pos: tuple, relative_scale: tuple, surface: pg.Surface) -> None:
+    def draw(self, relative_pos: tuple, relative_scale: tuple, surface: pg.Surface, plane: str) -> None:
         """
         Отрисовка игрока с анимацией прыжка.
 
