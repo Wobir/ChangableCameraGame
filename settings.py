@@ -14,7 +14,13 @@ HALF_WINDOW = (WINDOW_SIZE[0] // 2, WINDOW_SIZE[1] // 2)
 FPS = 60
 GRAVITY = 4
 
-
+KEYS = {
+"W_SC":119,
+"A_SC":97,
+"S_SC":115,
+"D_SC":100,
+"SPACE_SC":32
+}
 
 COLORS = {
     "bg": (255, 255, 255),

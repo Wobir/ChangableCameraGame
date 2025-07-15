@@ -3,7 +3,7 @@
 Модуль игрока и логики гравитации/прыжка.
 """
 import pygame as pg
-from settings import GRAVITY, WINDOW_SIZE, COLORS
+from settings import GRAVITY, WINDOW_SIZE, COLORS, KEYS
 from objects import Object
 
 
@@ -27,16 +27,16 @@ class Player(Object):
             world_border: Ограничения по карте.
         """
         speed = 10
-        if keys[pg.K_d]:
+        if keys[KEYS['D_SC']]:
             self.pos.x += speed
-        if keys[pg.K_a]:
+        if keys[KEYS['A_SC']]:
             self.pos.x -= speed
-        if keys[pg.K_w]:
+        if keys[KEYS['W_SC']]:
             self.pos.z -= speed
-        if keys[pg.K_s]:
+        if keys[KEYS['S_SC']]:
             self.pos.z += speed
 
-        if keys[pg.K_SPACE] and self.grounded:
+        if keys[KEYS['SPACE_SC']] and self.grounded:
             self.grounded = False
             self.v_speed = -50
             self.jump_anim = 10
